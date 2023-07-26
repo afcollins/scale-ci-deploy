@@ -20,6 +20,9 @@ data:
 {% endif %}
       retention: {{openshift_prometheus_retention_period}}
       baseImage: openshift/prometheus
+      resources:
+        limits:
+          memory: {{openshift_prometheus_limit_memory}}
       nodeSelector:
         node-role.kubernetes.io/infra: ""
       volumeClaimTemplate:
