@@ -65,6 +65,8 @@ items:
             tags:
             - name: kubernetes.io/cluster/{{cluster_name.stdout}}
               value: owned
+            - name: TicketId
+              value: 402
             userDataSecret:
               name: {{ user_data_secret }}
         versions:
