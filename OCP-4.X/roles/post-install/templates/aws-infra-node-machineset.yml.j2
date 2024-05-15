@@ -66,6 +66,8 @@ items:
             tags:
             - name: kubernetes.io/cluster/{{cluster_name.stdout}}
               value: owned
+            - name: TicketId
+              value: 422
             userDataSecret:
               name: {{ user_data_secret }}
         versions:
@@ -133,6 +135,8 @@ items:
                 values:
                 - {{cluster_name.stdout}}-private-{{aws_region.stdout}}b
             tags:
+            - name: TicketId
+              value: 422
             - name: kubernetes.io/cluster/{{cluster_name.stdout}}
               value: owned
             userDataSecret:
