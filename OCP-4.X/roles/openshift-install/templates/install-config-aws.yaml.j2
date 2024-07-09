@@ -37,6 +37,7 @@ platform:
   aws:
     userTags:
       User: {{ cluster_owner | default('ci') }}
+      TicketId: 445
     region: {{ aws_region }}
 pullSecret: |+
   {{ openshift_install_pull_secret | to_json }}
