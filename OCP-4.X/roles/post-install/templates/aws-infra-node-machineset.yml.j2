@@ -57,7 +57,7 @@ items:
             - filters:
               - name: tag:Name
                 values:
-                - {{cluster_name.stdout}}-worker-sg
+                - {{cluster_name.stdout}}-node
             subnet:
               filters:
               - name: tag:Name
@@ -128,12 +128,12 @@ items:
             - filters:
               - name: tag:Name
                 values:
-                - {{cluster_name.stdout}}-worker-sg
+                - {{cluster_name.stdout}}-node
             subnet:
               filters:
               - name: tag:Name
                 values:
-                - {{cluster_name.stdout}}-private-{{aws_region.stdout}}b
+                - {{cluster_name.stdout}}-subnet-private-{{aws_region.stdout}}b
             tags:
             - name: TicketId
               value: 445
