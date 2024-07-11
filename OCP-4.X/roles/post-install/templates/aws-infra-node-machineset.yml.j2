@@ -62,7 +62,7 @@ items:
               filters:
               - name: tag:Name
                 values:
-                - {{cluster_name.stdout}}-private-{{aws_region.stdout}}a
+                - {{cluster_name.stdout}}-subnet-private-{{aws_region.stdout}}a
             tags:
             - name: kubernetes.io/cluster/{{cluster_name.stdout}}
               value: owned
